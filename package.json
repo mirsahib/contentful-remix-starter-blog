@@ -1,0 +1,51 @@
+{
+  "private": true,
+  "name": "contentful-remix-starter-blog",
+  "description": "Remix starter for a Contentful blog (template) project",
+  "keywords": [
+    "contentful",
+    "remix",
+    "remix.run",
+    "starter",
+    "blog"
+  ],
+  "license": "",
+  "author": {
+    "name": "Marco Link",
+    "email": "marcoxlink@gmail.com",
+    "url": "https://github.com/marcolink"
+  },
+  "scripts": {
+    "build": "remix build",
+    "dev": "remix dev",
+    "setup": "npx contentful-cli space import --content-file=contentful/export.json --space-id=$CONTENTFUL_SPACE --management-token=$CONTENTFUL_CMA_TOKEN",
+    "generate": "npx cf-content-types-generator -s $CONTENTFUL_SPACE -t $CONTENTFUL_CMA_TOKEN -o ./types/generated --localized"
+  },
+  "dependencies": {
+    "@apollo/client": "^3.7.17",
+    "@contentful/rich-text-from-markdown": "^15.16.6",
+    "@contentful/rich-text-react-renderer": "^15.17.0",
+    "@remix-run/node": "^1.19.1",
+    "@remix-run/react": "^1.19.1",
+    "@remix-run/serve": "^1.18.1",
+    "@remix-run/server-runtime": "^1.19.1",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "reading-time": "^1.5.0"
+  },
+  "devDependencies": {
+    "@contentful/rich-text-types": "^16.2.0",
+    "@remix-run/dev": "^1.19.1",
+    "@remix-run/vercel": "^1.19.1",
+    "@types/graphql": "^14.5.0",
+    "@types/node": "^16.18.36",
+    "@types/react": "^18.0.27",
+    "@types/react-dom": "^17.0.9",
+    "contentful": "^9.3.5",
+    "typescript": "^4.9.5"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "sideEffects": false
+}
